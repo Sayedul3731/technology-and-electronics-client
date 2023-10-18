@@ -6,6 +6,7 @@ import Home from "../components/Home/Home";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import AddBrand from "../components/AddBrand/AddBrand";
 import AddFeedback from "../components/AddFeedback/AddFeedback";
+// import Feedbacks from "../components/Feedbacks/Feedbacks";
 
 const router = createBrowserRouter([
     {

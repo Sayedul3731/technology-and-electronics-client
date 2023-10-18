@@ -1,4 +1,4 @@
-
+import Swal from 'sweetalert2'
 
 const AddFeedback = () => {
 
@@ -13,6 +13,24 @@ const AddFeedback = () => {
         const photo = form.photo.value;
         const newFeedback = { name, company, position, rating, description, photo }
         console.log(newFeedback);
+        fetch('http://localhost:5000/feedback', {
+            method: "POST",
+            headers: {
+                "content-type" : "application/json"
+            },
+            body: JSON.stringify(newFeedback)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire(
+                    'Success!',
+                    'Client Feedback added Successfully.',
+                    'success'
+                  )
+            }
+        })
     }
     return (
         <div className="bg-sky-50 p-24">
