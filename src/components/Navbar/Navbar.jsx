@@ -17,9 +17,9 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center gap-3">
                     <img className="w-[40px] h-[40px] hidden lg:flex" src="logo.jpg" alt="" />
-                    <a className="btn btn-ghost normal-case text-xl">TechWizPro</a>
+                    <a className=" normal-case text-xl">TechWizPro</a>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

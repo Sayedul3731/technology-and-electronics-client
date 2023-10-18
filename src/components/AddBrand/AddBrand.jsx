@@ -24,7 +24,7 @@ const AddBrand = () => {
    
     }
     return (
-        <div className="bg-[#F4F3F0] p-24">
+        <div className="bg-sky-50 p-24">
             <h1 className="text-4xl font-semibold text-center">Add Brand</h1>
 
             <form onSubmit={handleAddBrand}>

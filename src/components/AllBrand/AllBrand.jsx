@@ -1,20 +1,32 @@
-import { useLoaderData } from "react-router-dom"
-import Brand from "./Brand";
+// import { useEffect, useState } from "react";
+// import Brand from "./Brand";
 
-const AllBrand = () => {
+// const AllBrand = () => {
 
-    const allBrand = useLoaderData()
+ 
 
-    return (
-        <div>
-            <h1 className="text-4xl font-semibold text-center my-10">Brands</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                {
-                    allBrand.map(brand => <Brand key={brand._id} brand={brand}></Brand>)
-                }
-            </div>
-        </div>
-    );
-};
+//     const [brands, setBrands] = useState("")
+    
 
-export default AllBrand;
+//     useEffect( () => {
+//         fetch('http://localhost:5000/brand')
+//         .then(res => res.json())
+//         .then(data => setBrands(data))
+//     },[brands])
+//     console.log(brands);
+    
+//     return (
+//         <div className="mb-10">
+//             <h1 className="text-4xl font-semibold text-center my-10">All Brand</h1>
+
+//             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+//                 {
+//                     brands.map(brand => <Brand key={brand._id} brand={brand}></Brand>)
+//                 }
+//             </div>
+       
+//         </div>
+//     );
+// };
+
+// export default AllBrand;
