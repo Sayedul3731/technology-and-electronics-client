@@ -6,6 +6,7 @@ import Home from "../components/Home/Home";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import AddBrand from "../components/AddBrand/AddBrand";
 import AddFeedback from "../components/AddFeedback/AddFeedback";
+import AddMember from "../components/AddMember/AddMember";
 // import Feedbacks from "../components/Feedbacks/Feedbacks";
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: "/addFeedback",
                 element: <AddFeedback></AddFeedback>
+            },
+            {
+                path: "/addMember",
+                element: <AddMember></AddMember>
             }
         ]
     }
