@@ -2,11 +2,35 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { BsGoogle } from 'react-icons/bs';
+
 
 
 const Login = () => {
 
     const {signIn} = useContext(AuthContext)
+    const {signInWithGoogle} = useContext(AuthContext)
+
+    const handleSignInWithGoogle = () => {
+        signInWithGoogle()
+        .then(result => {
+            console.log(result.user);
+            Swal.fire({
+                icon: 'success',
+                title: 'Thank You!',
+                text:"Logged in Successfully.",
+              })
+        })
+        .catch(error => {
+            console.error(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text:`${error.message}`,
+              })
+        })
+
+    }
     const handleSignIn = e => {
         e.preventDefault()
         const form = e.target;
@@ -55,6 +79,11 @@ const Login = () => {
                             <button className="w-full bg-sky-400 py-2 font-semibold text-xl text-white">Login</button>
                         </div>
                         <p>Do not have an account? Please <Link to="/register"><span className="text-sky-400 font-semibold">Register</span></Link></p>
+
+                        <div onClick={handleSignInWithGoogle} className="border cursor-pointer flex justify-center items-center py-2 mt-3 rounded-md">
+                           <p className=" flex justify-center"><BsGoogle></BsGoogle></p>
+                            <p className="font-semibold ">Sign In With Google</p>
+                        </div>
                     </form>
                 </div>
             </div>
