@@ -10,6 +10,8 @@ import AddMember from "../components/AddMember/AddMember";
 import Members from "../components/Members/Members";
 import Feedbacks from "../components/Feedbacks/Feedbacks";
 import AddProduct from "../Page/AddProduct/AddProduct";
+import Login from "../Page/Login/Login";
+import Register from "../Page/Register/Register";
 // import Feedbacks from "../components/Feedbacks/Feedbacks";
 
 const router = createBrowserRouter([
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
                 path: "/",
                 element: <Home></Home>,
                 loader: () => fetch('http://localhost:5000/brand')
+            },
+            {
+                path: "/register",
+                element: <Register></Register>
+            },
+            {
+                path: "/login",
+                element: <Login></Login>
             },
             {
                 path: "/addProduct",

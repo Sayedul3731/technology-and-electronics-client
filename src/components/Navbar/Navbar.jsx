@@ -28,7 +28,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <NavLink><button className="px-4 py-2 rounded-sm font-semibold bg-sky-400 text-white">Log in</button></NavLink>
+                <NavLink to="/login"><button className="px-4 py-2 rounded-sm font-semibold bg-sky-400 text-white">Log in</button></NavLink>
             </div>
         </div>
     );
