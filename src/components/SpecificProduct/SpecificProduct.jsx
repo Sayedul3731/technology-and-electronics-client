@@ -2,7 +2,6 @@ import PropTypes from "prop-types"
 import { NavLink } from "react-router-dom";
 
 const SpecificProduct = ({ specificProduct }) => {
-    console.log(specificProduct);
     const { _id, photo, name, brand, price, type, rating } = specificProduct;
     return (
         <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">

@@ -5,7 +5,6 @@ import SpecificProduct from "../SpecificProduct/SpecificProduct";
 
 const BrandDetails = () => {
     const brand = useLoaderData()
-    console.log(brand);
     const [products, setProducts] = useState([])
 
     useEffect(() => {
@@ -17,7 +16,7 @@ const BrandDetails = () => {
     }, [])
 
     const specificBrandProducts = products.filter(product => product.brand === brand.name)
-    console.log(specificBrandProducts);
+
 
 
 
