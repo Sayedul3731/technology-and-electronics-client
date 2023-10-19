@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 
 const AddMember = () => {
@@ -6,7 +7,8 @@ const AddMember = () => {
         const form = e.target;
         const name = form.name.value;
         const photo = form.photo.value;
-        const newMember = {name, photo}
+        const title = form.title.value;
+        const newMember = {name, photo, title}
         console.log(newMember);
 
         fetch('http://localhost:5000/member', {
@@ -19,6 +21,13 @@ const AddMember = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            if(data.insertedId){
+                Swal.fire(
+                    'Success!',
+                    'New Member added Successfully.',
+                    'success'
+                  )
+            }
         })
     }
     return (
@@ -34,6 +43,16 @@ const AddMember = () => {
                     </label>
                     <label className="input-group">
                         <input type="text" name="name" placeholder="Name" className="input input-bordered md:w-full" />
+                    </label>
+                </div>
+            </div>
+            <div className="md:flex gap-5">
+                <div className="form-control w-full">
+                    <label className="label">
+                        <span className="label-text">Job Title</span>
+                    </label>
+                    <label className="input-group">
+                        <input type="text" name="title" placeholder="Title Name" className="input input-bordered md:w-full" />
                     </label>
                 </div>
             </div>

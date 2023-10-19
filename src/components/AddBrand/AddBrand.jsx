@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 
 const AddBrand = () => {
@@ -20,6 +21,13 @@ const AddBrand = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            if(data.insertedId){
+                Swal.fire(
+                    'Success!',
+                    'Brand added Successfully.',
+                    'success'
+                  )
+            }
         })
    
     }
