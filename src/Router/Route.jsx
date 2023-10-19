@@ -14,6 +14,7 @@ import Login from "../Page/Login/Login";
 import Register from "../Page/Register/Register";
 import BrandDetails from "../components/BrandDetails/BrandDetails";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
+import PrivetRoute from "./PrivetRoute";
 // import Feedbacks from "../components/Feedbacks/Feedbacks";
 
 const router = createBrowserRouter([
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addProduct",
-                element: <AddProduct></AddProduct>
+                element: <PrivetRoute><AddProduct></AddProduct></PrivetRoute>
             },
             {
                 path: "/addBrand",

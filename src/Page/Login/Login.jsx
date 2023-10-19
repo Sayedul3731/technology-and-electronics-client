@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { BsGoogle } from 'react-icons/bs';
@@ -10,6 +10,8 @@ const Login = () => {
 
     const {signIn} = useContext(AuthContext)
     const {signInWithGoogle} = useContext(AuthContext)
+    const Navigate = useNavigate()
+    const location = useLocation()
 
     const handleSignInWithGoogle = () => {
         signInWithGoogle()
@@ -20,6 +22,7 @@ const Login = () => {
                 title: 'Thank You!',
                 text:"Logged in Successfully.",
               })
+              Navigate( location?.state ? location.state : "/")
         })
         .catch(error => {
             console.error(error);
@@ -45,6 +48,7 @@ const Login = () => {
                 title: 'Thank You!',
                 text:"Logged in Successfully.",
               })
+              Navigate( location?.state ? location.state : "/")
         })
         .catch(error => {
             console.error(error);
