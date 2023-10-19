@@ -1,8 +1,9 @@
 import PropTypes from "prop-types"
+import { NavLink } from "react-router-dom";
 
 const SpecificProduct = ({ specificProduct }) => {
     console.log(specificProduct);
-    const { photo, name, brand, price, type, rating } = specificProduct;
+    const { _id, photo, name, brand, price, type, rating } = specificProduct;
     return (
         <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
             <div className="relative h-[400px] lg:h-[500px] mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
@@ -47,6 +48,7 @@ const SpecificProduct = ({ specificProduct }) => {
                     </p>
             </div>
             <div className=" flex justify-between gap-5 items-center px-4 pb-4">
+                <NavLink to={`/product/${_id}`}>
                 <button
                     className="block select-none rounded-sm bg-sky-400 py-3.5 px-7 text-center align-middle  text-sm font-bold uppercase text-white shadow-md shadow-sky-500/20 transition-all hover:shadow-lg hover:shadow-sky-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                     type="button"
@@ -54,6 +56,7 @@ const SpecificProduct = ({ specificProduct }) => {
                 >
                     Details
                 </button>
+                </NavLink>
                 <button
                     className="block select-none rounded-sm bg-sky-400 py-3.5 px-7 text-center align-middle  text-sm font-bold uppercase text-white shadow-md shadow-sky-500/20 transition-all hover:shadow-lg hover:shadow-sky-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                     type="button"
