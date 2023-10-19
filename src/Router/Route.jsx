@@ -12,6 +12,7 @@ import Feedbacks from "../components/Feedbacks/Feedbacks";
 import AddProduct from "../Page/AddProduct/AddProduct";
 import Login from "../Page/Login/Login";
 import Register from "../Page/Register/Register";
+import BrandDetails from "../components/BrandDetails/BrandDetails";
 // import Feedbacks from "../components/Feedbacks/Feedbacks";
 
 const router = createBrowserRouter([
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
             {
                 path: "/addBrand",
                 element: <AddBrand></AddBrand>
+            },
+            {
+                path: "/brand/:id",
+                element: <BrandDetails></BrandDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/brand/${params.id}`)
             },
             {
                 path: "/addFeedback",

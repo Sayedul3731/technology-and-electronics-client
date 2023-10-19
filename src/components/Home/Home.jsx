@@ -4,7 +4,6 @@ import Banner from "../Banner/Banner";
 import Footer from "../Footer/Footer";
 import Feedbacks from "../Feedbacks/Feedbacks";
 import Members from "../Members/Members";
-// import Feedbacks from "../Feedbacks/Feedbacks";
 
 
 const Home = () => {

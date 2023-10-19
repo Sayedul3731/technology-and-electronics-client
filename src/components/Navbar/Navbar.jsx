@@ -16,7 +16,6 @@ const Navbar = () => {
         .then()
         .catch()
     }
-    console.log(user);
     return (
         <div className="navbar bg-base-100 py-5">
             <div className="navbar-start">
