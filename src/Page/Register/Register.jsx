@@ -25,7 +25,7 @@ const Register = () => {
                     <div className="form-control mt-6">
                         <button className="w-full bg-sky-400 py-2 font-semibold text-xl text-white">Register</button>
                     </div>
-                    <p>Already have an account? Please <Link to="/register"><span className="text-sky-400 font-semibold">Login</span></Link></p>
+                    <p>Already have an account? Please <Link to="/login"><span className="text-sky-400 font-semibold">Login</span></Link></p>
                 </form>
             </div>
         </div>
