@@ -11,7 +11,7 @@ const Member = ({ member }) => {
                 <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                     {name}
                 </h4>
-                <p className="block font-sans text-base antialiased font-medium leading-relaxed text-transparent bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-text">
+                <p className="block font-sans text-base antialiased font-medium leading-relaxed text-transparent bg-gradient-to-tr from-sky-600 to-sky-400 bg-clip-text">
                     {title}
                 </p>
             </div>
