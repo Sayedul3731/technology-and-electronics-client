@@ -10,6 +10,12 @@ const Navbar = () => {
     </>
 
     const { user } = useContext(AuthContext)
+    const {logOut} = useContext(AuthContext)
+    const handleLogOut = () => {
+        logOut()
+        .then()
+        .catch()
+    }
     console.log(user);
     return (
         <div className="navbar bg-base-100 py-5">
@@ -32,13 +38,13 @@ const Navbar = () => {
                     {navLinks}
                 </ul>
             </div>
-            <div className="border navbar-end w-1/2 ml-2">
+            <div className=" navbar-end w-1/2 ml-2">
                 {
-                    user ? <div  className="flex justify-center items-center "><span className="text-sm font-semibold md:mr-1">{user.displayName}</span> <span><img className="w-[50px] h-[50px] rounded-full" src={user.photoURL} alt="" /></span></div> : ''
+                    user ? <div  className="flex justify-center items-center "><span className="text-sm font-semibold md:mr-1">{user.displayName}</span> <span><img className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full" src={user.photoURL} alt="" /></span></div> : ''
                 }
             </div>
             <div className="navbar-end">
-                <NavLink to="/login"><button className="px-4 py-2 rounded-sm font-semibold bg-sky-400 text-white">{user ? 'Log Out' : 'Log in'}</button></NavLink>
+                <NavLink to="/login"><button className="px-4 py-2 rounded-sm font-semibold bg-sky-400 text-white">{user ? <span onClick={handleLogOut}>Log Out</span> : 'Log in'}</button></NavLink>
             </div>
         </div>
     );
