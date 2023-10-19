@@ -25,6 +25,11 @@ const Register = () => {
             userCreate(email, password)
                 .then(result => {
                     console.log(result.user);
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Congratulations!',
+                        text:"User Created Successfully.",
+                      })
                 })
                 .catch(error => {
                     console.error(error);
