@@ -15,7 +15,7 @@ const AddProduct = () => {
         const photo = form.photo.value;
         const newProduct = {name, brand, type, price, description, rating, photo};
         console.log(newProduct);
-        fetch('http://localhost:5000/product', {
+        fetch('https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/product', {
             method: "POST",
             headers: {
                 "content-type" : "application/json"
@@ -108,7 +108,7 @@ const AddProduct = () => {
                 </div>
             </div>
 
-            <input className="btn btn-block bg-sky-400 text-white mt-10" type="submit" value="Add Product" />
+            <input className="btn btn-block bg-green-400 lg:bg-sky-400 text-white mt-10" type="submit" value="Add Product" />
              
         </form>
     </div>

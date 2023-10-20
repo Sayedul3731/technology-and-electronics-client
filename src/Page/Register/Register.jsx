@@ -23,7 +23,7 @@ const Register = () => {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'You should have at least 6 character, a capital letter and a special letter.',
+                text: 'Please should be at least 6 character, a capital letter and a special character.',
               })
         } else {
             userCreate(email, password)

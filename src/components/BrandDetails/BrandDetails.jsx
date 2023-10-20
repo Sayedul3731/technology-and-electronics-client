@@ -8,7 +8,7 @@ const BrandDetails = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/product')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -22,7 +22,7 @@ const BrandDetails = () => {
 
     return (
         <div className="w-full ">
-            <div className="carousel w-1/2 ml-[320px]">
+            <div className="carousel w-1/2 ml-[100px] md:ml-[200px] lg:ml-[320px]">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="/bkash.png" className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-0 right-0 top-1/2">
@@ -53,9 +53,9 @@ const BrandDetails = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-10 relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-10">
                 {
-                    specificBrandProducts.length > 0 ? specificBrandProducts.map(specificProduct => <SpecificProduct key={specificProduct._id} specificProduct={specificProduct}></SpecificProduct>) : <div className="flex absolute  h-max-screen justify-center items-center md:ml-44 lg:ml-96"><p className="font-medium text-center text-red-400">Currently no product of this brand has been launched!!! <br /> but will be launched very soon...</p></div>
+                    specificBrandProducts.length > 0 ? specificBrandProducts.map(specificProduct => <SpecificProduct key={specificProduct._id} specificProduct={specificProduct}></SpecificProduct>) : <div className="flex  h-max-screen justify-center items-center lg:ml-96"><p className="font-medium text-center text-red-400">Currently no product of this brand has been launched!!! <br /> But will be launched very soon...</p></div>
                 }
             </div>
         </div>

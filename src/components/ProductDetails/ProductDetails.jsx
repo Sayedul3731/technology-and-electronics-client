@@ -8,7 +8,7 @@ const ProductDetails = () => {
     const {  photo, name, brand, price, type, rating,description } = product;
     const handleAddToCart = () => {
        console.log(product);
-       fetch('http://localhost:5000/cart', {
+       fetch('https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/cart', {
         method: "POST",
         headers: {
             "content-type" : "application/json"
@@ -29,7 +29,7 @@ const ProductDetails = () => {
     }
     return (
         <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
-        <div className="relative h-[400px] lg:h-[500px] mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
+        <div className="relative h-[400px] lg:h-[500px] mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
             <img className="w-full h-full"
                 src={photo}
                 alt="ui/ux review check"
@@ -76,7 +76,7 @@ const ProductDetails = () => {
         <div className=" px-4 pb-4">
             <NavLink>
             <button onClick={handleAddToCart}
-                className="block w-full select-none rounded-sm bg-sky-400 py-3.5 px-7 text-center align-middle  text-sm font-bold uppercase text-white shadow-md shadow-sky-500/20 transition-all hover:shadow-lg hover:shadow-sky-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                className="block w-full select-none rounded-sm bg-green-500 lg:bg-sky-400 py-3.5 px-7 text-center align-middle  text-sm font-bold uppercase text-white shadow-md shadow-sky-500/20 transition-all hover:shadow-lg hover:shadow-sky-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 type="button"
                 data-ripple-light="true"
             >

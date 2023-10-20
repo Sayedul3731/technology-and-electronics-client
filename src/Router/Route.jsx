@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/brand')
+                loader: () => fetch('https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/brand')
             },
             {
                 path: "/register",
@@ -44,8 +44,8 @@ const router = createBrowserRouter([
             },
             {
                 path: "/myCart",
-                element: <MyCart></MyCart>,
-                loader: () => fetch('http://localhost:5000/cart')
+                element: <PrivetRoute><MyCart></MyCart></PrivetRoute>,
+                loader: () => fetch('https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/cart')
             },
             {
                 path: "/addBrand",
@@ -54,12 +54,12 @@ const router = createBrowserRouter([
             {
                 path: "/brand/:id",
                 element: <BrandDetails></BrandDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/brand/${params.id}`)
+                loader: ({params}) => fetch(`https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/brand/${params.id}`)
             },
             {
                 path: "/product/:id",
                 element: <PrivetRoute><ProductDetails></ProductDetails></PrivetRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+                loader: ({params}) => fetch(`https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/product/${params.id}`)
             },
             {
                 path: "/updateProduct",
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
             {
                 path: "/feedback",
                 element: <Feedbacks></Feedbacks>,
-                loader: () => fetch('http://localhost:5000/feedbackf')
+                loader: () => fetch('https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/feedbackf')
             }
         ]
     }

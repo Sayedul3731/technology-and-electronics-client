@@ -20,7 +20,7 @@ const CartProduct = ({ cart, carts, setCarts }) => {
         }).then((result) => {
             if (result.isConfirmed) {
                 console.log('delete confirm');
-                fetch(`http://localhost:5000/cart/${_id}`, {
+                fetch(`https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/cart/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -43,12 +43,12 @@ const CartProduct = ({ cart, carts, setCarts }) => {
     }
     return (
         <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
-            <div className="relative h-[400px] lg:h-[500px] mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
+            <div className="relative h-[400px] lg:h-[500px] mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
                 <img className="w-full h-full"
                     src={photo}
                     alt="ui/ux review check"
                 />
-                <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
+                <div className="inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
             </div>
             <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
@@ -87,7 +87,7 @@ const CartProduct = ({ cart, carts, setCarts }) => {
             <div className="px-4 pb-4">
                 <NavLink>
                     <button onClick={() => handleDelete(_id)}
-                        className="block select-none w-full border rounded-sm bg-sky-400 py-3.5 px-7 text-center align-middle  text-sm font-bold uppercase text-white shadow-md shadow-sky-500/20 transition-all hover:shadow-lg hover:shadow-sky-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        className="block select-none w-full border rounded-sm bg-green-400 lg:bg-sky-400 py-3.5 px-7 text-center align-middle  text-sm font-bold uppercase text-white shadow-md shadow-sky-500/20 transition-all hover:shadow-lg hover:shadow-sky-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                         type="button"
                         data-ripple-light="true"
                     >

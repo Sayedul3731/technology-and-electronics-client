@@ -4,9 +4,9 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
     const navLinks = <>
-        <li> <NavLink to="/">Home</NavLink></li>
-        <li> <NavLink to="/addProduct">Add Product</NavLink></li>
-        <li><NavLink to="/myCart">My Cart</NavLink></li>
+        <li> <NavLink className="font-medium" to="/">Home</NavLink></li>
+        <li> <NavLink className="font-medium" to="/addProduct">Add Product</NavLink></li>
+        <li><NavLink  className="font-medium" to="/myCart">My Cart</NavLink></li>
     </>
 
     const { user } = useContext(AuthContext)
@@ -29,7 +29,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex justify-center items-center gap-3">
                     <img className="w-[40px] h-[40px] hidden lg:flex" src="/logo.jpg" alt="" />
-                    <a className=" normal-case text-xl">TechWizPro</a>
+                    <a className=" normal-case text-xl font-semibold">TechWizPro</a>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -37,13 +37,13 @@ const Navbar = () => {
                     {navLinks}
                 </ul>
             </div>
-            <div className=" navbar-end w-1/2 ml-2">
+            <div className=" navbar-end w-1/2">
                 {
-                    user ? <div  className="flex justify-center items-center "><span className="text-sm font-semibold md:mr-1">{user.displayName}</span> <span><img className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full" src={user.photoURL} alt="" /></span></div> : ''
+                    user ? <div  className="flex justify-center items-center "><span className="text-sm font-semibold">{user.displayName}</span> <span><img className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full" src={user.photoURL} alt="" /></span></div> : ''
                 }
             </div>
             <div className="navbar-end">
-                <NavLink to="/login"><button className="px-4 py-2 rounded-sm font-semibold bg-sky-400 text-white">{user ? <span onClick={handleLogOut}>Log Out</span> : 'Log in'}</button></NavLink>
+                <NavLink to="/login"><button className="px-4 py-2 rounded-sm font-semibold bg-green-500 lg:bg-sky-400 text-white">{user ? <span onClick={handleLogOut}>Log Out</span> : 'Log in'}</button></NavLink>
             </div>
         </div>
     );

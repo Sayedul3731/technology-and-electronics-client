@@ -13,7 +13,7 @@ const AddFeedback = () => {
         const photo = form.photo.value;
         const newFeedback = { name, company, position, rating, description, photo }
         console.log(newFeedback);
-        fetch('http://localhost:5000/feedback', {
+        fetch('https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/feedback', {
             method: "POST",
             headers: {
                 "content-type" : "application/json"

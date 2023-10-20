@@ -7,7 +7,7 @@ const Members = () => {
 
     const [members, setMembers] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/member')
+        fetch('https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/member')
             .then(res => res.json())
             .then(data => {
                 setMembers(data)

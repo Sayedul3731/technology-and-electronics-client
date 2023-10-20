@@ -49,14 +49,7 @@ const UpdateProduct = () => {
                 </div>
                 {/* form row  */}
                 <div className="md:flex gap-5">
-                    <div className="form-control w-full">
-                        <label className="label">
-                            <span className="label-text">Description</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" name="description" placeholder="Description" className="input input-bordered md:w-full" />
-                        </label>
-                    </div>
+                    
                     <div className="form-control w-full">
                         <label className="label">
                             <span className="label-text">Rating</span>
