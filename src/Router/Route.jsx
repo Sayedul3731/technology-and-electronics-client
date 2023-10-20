@@ -16,6 +16,7 @@ import BrandDetails from "../components/BrandDetails/BrandDetails";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
 import PrivetRoute from "./PrivetRoute";
 import UpdateProduct from "../components/UpdateProduct/UpdateProduct";
+import MyCart from "../Page/MyCart/MyCart";
 // import Feedbacks from "../components/Feedbacks/Feedbacks";
 
 const router = createBrowserRouter([
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
                 element: <PrivetRoute><AddProduct></AddProduct></PrivetRoute>
             },
             {
+                path: "/myCart",
+                element: <MyCart></MyCart>,
+                loader: () => fetch('http://localhost:5000/cart')
+            },
+            {
                 path: "/addBrand",
                 element: <AddBrand></AddBrand>
             },
@@ -57,7 +63,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/updateProduct",
-                element: <UpdateProduct></UpdateProduct>
+                element: <PrivetRoute><UpdateProduct></UpdateProduct></PrivetRoute>
             },
             {
                 path: "/addFeedback",
