@@ -15,6 +15,7 @@ import Register from "../Page/Register/Register";
 import BrandDetails from "../components/BrandDetails/BrandDetails";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
 import PrivetRoute from "./PrivetRoute";
+import UpdateProduct from "../components/UpdateProduct/UpdateProduct";
 // import Feedbacks from "../components/Feedbacks/Feedbacks";
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
                 path: "/product/:id",
                 element: <PrivetRoute><ProductDetails></ProductDetails></PrivetRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: "/updateProduct",
+                element: <UpdateProduct></UpdateProduct>
             },
             {
                 path: "/addFeedback",

@@ -21,7 +21,7 @@ const ProductDetails = () => {
         if(data.insertedId){
             Swal.fire(
                 'Success!',
-                'Product added Successfully.',
+                'Product Cart Successfully.',
                 'success'
               )
         }
