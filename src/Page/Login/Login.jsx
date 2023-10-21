@@ -1,8 +1,8 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
-import { BsGoogle } from 'react-icons/bs';
+import { BsGoogle, BsFillEyeFill,BsFillEyeSlashFill } from 'react-icons/bs';
 
 
 
@@ -12,6 +12,7 @@ const Login = () => {
     const {signInWithGoogle} = useContext(AuthContext)
     const Navigate = useNavigate()
     const location = useLocation()
+    const [show, setShow] = useState(false)
 
     const handleSignInWithGoogle = () => {
         signInWithGoogle()
@@ -73,11 +74,12 @@ const Login = () => {
                             </label>
                             <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                         </div>
-                        <div className="form-control">
+                        <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                            <input onChange={(e) => setShow(e.target.value)} type={show ? 'password' : 'text'} name="password" placeholder="password" className="input input-bordered" required />
+                            <span className="absolute ml-[260px] mt-[52px] cursor-pointer" onClick={() => setShow(!show)}>{ show ?<BsFillEyeSlashFill></BsFillEyeSlashFill> : <BsFillEyeFill></BsFillEyeFill> }</span>
                         </div>
                         <div className="form-control mt-6">
                             <button className="w-full bg-sky-400 py-2 font-semibold text-xl text-white">Login</button>

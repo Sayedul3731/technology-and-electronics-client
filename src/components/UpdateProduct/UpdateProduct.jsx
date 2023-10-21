@@ -20,7 +20,7 @@ const UpdateProduct = () => {
         const photo = form.photo.value;
         const updatedProduct = {name, brand, type, price, rating, photo};
         console.log(updatedProduct);
-        fetch(`https://technology-and-electronics-server-oim0vd2mw-ate-yours-projects.vercel.app/product/${_id}`, {
+        fetch(`https://technology-and-electronics-server-jd32vo1zk-ate-yours-projects.vercel.app/product/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
