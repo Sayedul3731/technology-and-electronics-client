@@ -8,9 +8,13 @@ export default {
     extend: {
       fontFamily: {
         openSans : "font-family: 'Open Sans', sans-serif;"
-      }
+      },
+      
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
 }
 

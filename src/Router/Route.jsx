@@ -17,7 +17,6 @@ import ProductDetails from "../components/ProductDetails/ProductDetails";
 import PrivetRoute from "./PrivetRoute";
 import UpdateProduct from "../components/UpdateProduct/UpdateProduct";
 import MyCart from "../Page/MyCart/MyCart";
-// import Feedbacks from "../components/Feedbacks/Feedbacks";
 
 const router = createBrowserRouter([
     {
