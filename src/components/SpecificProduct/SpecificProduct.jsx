@@ -56,7 +56,7 @@ const SpecificProduct = ({ specificProduct }) => {
                         Details
                     </button>
                 </NavLink>
-                <NavLink to={`/updateProduct`}>
+                <NavLink to={`/updateProduct/${_id}`}>
                     <button
                         className="block select-none rounded-sm bg-green-600 lg:bg-sky-600 py-3.5 px-7 text-center align-middle  text-sm font-bold uppercase text-white shadow-md shadow-sky-500/20 transition-all hover:shadow-lg hover:shadow-sky-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                         type="button"
