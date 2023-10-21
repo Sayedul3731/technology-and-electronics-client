@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Feedback = ({ feedback }) => {
     const { photo, name, description, company, position } = feedback;
     return (
-        <div className="relative flex w-full  flex-col bg-green-50 lg:bg-sky-50 rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-lg px-3 pt-3">
+        <div className="relative flex w-full  flex-col bg-green-100 lg:bg-sky-50 rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-lg px-3 pt-3">
             <div className="relative flex items-center gap-4 pt-0 pb-8 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
                 <img
                     src={photo}

@@ -58,7 +58,7 @@ const Navbar = () => {
                     user ? <div className="flex justify-center items-center "><span className="text-sm font-semibold">{user.displayName}</span> <span><img className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full" src={user.photoURL} alt="" /></span></div> : ''
                 }
             </div>
-            <div className=" navbar-end w-[50px] absolute mt-16 -ml-3 md:ml-[550px] lg:ml-[1050px]">
+            <div className=" navbar-end w-[50px] absolute mt-16 md:mt-0 -ml-3 md:ml-[550px] lg:ml-[1050px]">
                 <label  className="swap swap-rotate">
 
                     {/* this hidden checkbox controls the state */}
