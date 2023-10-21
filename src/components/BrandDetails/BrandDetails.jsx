@@ -8,7 +8,7 @@ const BrandDetails = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('https://technology-and-electronics-server-pkf6aamwy-ate-yours-projects.vercel.app/product')
+        fetch('https://technology-and-electronics-server-ctbe8l6px-ate-yours-projects.vercel.app/product')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)

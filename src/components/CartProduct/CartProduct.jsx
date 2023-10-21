@@ -20,7 +20,7 @@ const CartProduct = ({ cart, carts, setCarts }) => {
         }).then((result) => {
             if (result.isConfirmed) {
                 console.log('delete confirm');
-                fetch(`https://technology-and-electronics-server-pkf6aamwy-ate-yours-projects.vercel.app/cart/${_id}`, {
+                fetch(`https://technology-and-electronics-server-ctbe8l6px-ate-yours-projects.vercel.app/cart/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -29,7 +29,7 @@ const CartProduct = ({ cart, carts, setCarts }) => {
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
-                                'Your file has been deleted.',
+                                'Your Product has been deleted.',
                                 'success'
                             )
                             const remaining = carts.filter(cart => cart._id !== _id)
