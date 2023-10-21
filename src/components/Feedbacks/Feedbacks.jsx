@@ -9,7 +9,7 @@ const Feedbacks = () => {
     const [feedbacks, setFeedbacks] = useState([])
 
     useEffect(() => {
-        fetch('https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/feedback')
+        fetch('https://technology-and-electronics-server-pkf6aamwy-ate-yours-projects.vercel.app/feedback')
             .then(res => res.json())
             .then(data => {
               setFeedbacks(data)

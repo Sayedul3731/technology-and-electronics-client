@@ -11,7 +11,7 @@ const AddBrand = () => {
         const newBrand = {name, photo}
         console.log(newBrand);
 
-        fetch('https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/brand', {
+        fetch('https://technology-and-electronics-server-pkf6aamwy-ate-yours-projects.vercel.app/brand', {
             method: "POST",
             headers: {
                 "content-type" : "application/json"

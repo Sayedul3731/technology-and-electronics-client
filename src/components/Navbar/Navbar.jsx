@@ -55,7 +55,7 @@ const Navbar = () => {
             </div>
             <div className=" navbar-end w-1/2">
                 {
-                    user ? <div className="flex justify-center items-center "><span className="text-sm font-semibold">{user.displayName}</span> <span><img className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full" src={user.photoURL} alt="" /></span></div> : ''
+                    user ? <div className="flex justify-center items-center"><span className="text-sm font-semibold">{user.displayName}</span> <span><img className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] ml-0 md:ml-5 rounded-full" src={user.photoURL} alt="" /></span></div> : ''
                 }
             </div>
             <div className=" navbar-end w-[50px] absolute mt-16 md:mt-0 -ml-3 md:ml-[550px] lg:ml-[1050px]">

@@ -8,7 +8,7 @@ const ProductDetails = () => {
     const {  photo, name, brand, price, type, rating,description } = product;
     const handleAddToCart = () => {
        console.log(product);
-       fetch('https://technology-and-electronics-server-fh3ahw6nq-ate-yours-projects.vercel.app/cart', {
+       fetch('https://technology-and-electronics-server-pkf6aamwy-ate-yours-projects.vercel.app/cart', {
         method: "POST",
         headers: {
             "content-type" : "application/json"
