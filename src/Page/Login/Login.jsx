@@ -79,7 +79,7 @@ const Login = () => {
                                 <span className="label-text">Password</span>
                             </label>
                             <input onChange={(e) => setShow(e.target.value)} type={show ? 'password' : 'text'} name="password" placeholder="password" className="input input-bordered" required />
-                            <span className="absolute ml-[260px] mt-[52px] cursor-pointer" onClick={() => setShow(!show)}>{ show ?<BsFillEyeSlashFill></BsFillEyeSlashFill> : <BsFillEyeFill></BsFillEyeFill> }</span>
+                            <span className="absolute ml-[260px] mt-[52px] cursor-pointer" onClick={() => setShow(!show)}>{ show ? <BsFillEyeFill></BsFillEyeFill>  : <BsFillEyeSlashFill></BsFillEyeSlashFill> }</span>
                         </div>
                         <div className="form-control mt-6">
                             <button className="w-full bg-sky-400 py-2 font-semibold text-xl text-white">Login</button>

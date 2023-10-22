@@ -8,14 +8,15 @@ const BrandDetails = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('https://technology-and-electronics-server-jd32vo1zk-ate-yours-projects.vercel.app/product')
+        fetch('https://technology-and-electronics-server-pjepewb2m-ate-yours-projects.vercel.app/product')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
             })
     }, [])
 
-    const specificBrandProducts = products.filter(product => product.brand === brand.name)
+    const specificBrandProducts = products.filter(product => product.brand.toLowerCase() === brand.name.toLowerCase())
+
 
 
 

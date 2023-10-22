@@ -13,7 +13,7 @@ const ProductDetails = () => {
     const { photo, name, brand, price, type, rating, description } = product;
     const newProduct = { ...product, email }
     const handleAddToCart = () => {
-        fetch('https://technology-and-electronics-server-jd32vo1zk-ate-yours-projects.vercel.app/cart', {
+        fetch('https://technology-and-electronics-server-pjepewb2m-ate-yours-projects.vercel.app/cart', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

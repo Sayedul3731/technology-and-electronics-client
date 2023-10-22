@@ -11,7 +11,7 @@ const AddMember = () => {
         const newMember = {name, photo, title}
         console.log(newMember);
 
-        fetch('https://technology-and-electronics-server-jd32vo1zk-ate-yours-projects.vercel.app/member', {
+        fetch('https://technology-and-electronics-server-pjepewb2m-ate-yours-projects.vercel.app/member', {
             method: "POST",
             headers: {
                 "content-type" : "application/json"
