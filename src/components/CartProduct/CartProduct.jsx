@@ -20,7 +20,7 @@ const CartProduct = ({ cart, carts, setCarts }) => {
         }).then((result) => {
             if (result.isConfirmed) {
                 console.log('delete confirm');
-                fetch(`https://technology-and-electronics-server-pjepewb2m-ate-yours-projects.vercel.app/cart/${_id}`, {
+                fetch(`https://technology-and-electronics-server-fd923tlg8-ate-yours-projects.vercel.app/cart/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

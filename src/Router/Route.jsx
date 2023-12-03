@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('https://technology-and-electronics-server-pjepewb2m-ate-yours-projects.vercel.app/brand')
+                loader: () => fetch('https://technology-and-electronics-server-fd923tlg8-ate-yours-projects.vercel.app/brand')
             },
             {
                 path: "/register",
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
             {
                 path: "/myCart",
                 element: <PrivetRoute><MyCart></MyCart></PrivetRoute>,
-                loader: () => fetch('https://technology-and-electronics-server-pjepewb2m-ate-yours-projects.vercel.app/cart')
+                loader: () => fetch('https://technology-and-electronics-server-fd923tlg8-ate-yours-projects.vercel.app/cart')
             },
             {
                 path: "/addBrand",
@@ -53,17 +53,17 @@ const router = createBrowserRouter([
             {
                 path: "/brand/:id",
                 element: <BrandDetails></BrandDetails>,
-                loader: ({params}) => fetch(`https://technology-and-electronics-server-pjepewb2m-ate-yours-projects.vercel.app/brand/${params.id}`)
+                loader: ({params}) => fetch(`https://technology-and-electronics-server-fd923tlg8-ate-yours-projects.vercel.app/brand/${params.id}`)
             },
             {
                 path: "/product/:id",
                 element: <PrivetRoute><ProductDetails></ProductDetails></PrivetRoute>,
-                loader: ({params}) => fetch(`https://technology-and-electronics-server-pjepewb2m-ate-yours-projects.vercel.app/product/${params.id}`)
+                loader: ({params}) => fetch(`https://technology-and-electronics-server-fd923tlg8-ate-yours-projects.vercel.app/product/${params.id}`)
             },
             {
                 path: "/updateProduct/:id",
                 element: <PrivetRoute><UpdateProduct></UpdateProduct></PrivetRoute>,
-                loader: ({params}) => fetch(`https://technology-and-electronics-server-pjepewb2m-ate-yours-projects.vercel.app/product/${params.id}`)
+                loader: ({params}) => fetch(`https://technology-and-electronics-server-fd923tlg8-ate-yours-projects.vercel.app/product/${params.id}`)
             },
             {
                 path: "/addFeedback",
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
             {
                 path: "/feedback",
                 element: <Feedbacks></Feedbacks>,
-                loader: () => fetch('https://technology-and-electronics-server-pjepewb2m-ate-yours-projects.vercel.app/feedbackf')
+                loader: () => fetch('https://technology-and-electronics-server-fd923tlg8-ate-yours-projects.vercel.app/feedbackf')
             }
         ]
     }

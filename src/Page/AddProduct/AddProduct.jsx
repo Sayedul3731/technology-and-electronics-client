@@ -15,7 +15,7 @@ const AddProduct = () => {
         const photo = form.photo.value;
         const newProduct = {name, brand, type, price, description, rating, photo};
         console.log(newProduct);
-        fetch('https://technology-and-electronics-server-pjepewb2m-ate-yours-projects.vercel.app/product', {
+        fetch('https://technology-and-electronics-server-fd923tlg8-ate-yours-projects.vercel.app/product', {
             method: "POST",
             headers: {
                 "content-type" : "application/json"
