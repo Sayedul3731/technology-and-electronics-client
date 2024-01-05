@@ -1,4 +1,4 @@
-# Technology and Electronics
+## Technology and Electronics
 ## Live Link:https://techno-and-electro-client.web.app/
 
 
