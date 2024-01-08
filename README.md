@@ -2,7 +2,7 @@
 ## Live Link:https://techno-and-electro-client.web.app/
 
 
-## 6 feature explanation of my project 
+### 6 feature explanation of my project 
 * My project name is `Technology and Electronics`. When a user come to my project
  then he/she will see a navbar which 3 Pages `Home`, `Add Product`, `My Cart` and will see a `Login` button(if user is not logged in) in the right side, a logo and a name in the left side of our company. If the user registered or logged in, will see a `Log Out` button, user name and user profile in the right side of navbar if user put his name and his photoURL when registered. When user click on the `Home` will see `Home Page` content where are a `Banner`,a `All Brand` Section, a `Client Feedback` section, a `Our Team Members` section and a `Footer`.
 * When a user click any brand card in the 'Home Page', will see the specific brand products, at the same time he/she will see a slider(carousel) which includes 4 advertisement company name. The specific brand product have many information like 'product name', 'brand name', 'type' etc. and two button. They are `DETAILS` and `UPDATE`. If user click on the `DETAILS` button, will see the product details and at the same time he/she will see a `ADD TO CART` button. If the user click on the `ADD TO CART` button the product will be added like purchases.   
